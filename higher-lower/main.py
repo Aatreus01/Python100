@@ -60,7 +60,7 @@ while (gamelost != True):
         a = b
         b = randomIntGen()
         game_continue(a, b, score)
-        
+    print("anan")
     
 
 
