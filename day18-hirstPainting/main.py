@@ -25,7 +25,6 @@ for _ in range(repeat):
     y += 50
     tim.setpos(x, y)
 
-tim.hideturtle()
 
 
 
