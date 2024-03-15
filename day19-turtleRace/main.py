@@ -38,5 +38,3 @@ while is_race_on:
             else:
                 print(f"Zaaa mal {winner_color} kazandı, sen {user_bet} seçmiştin")
 screen.exitonclick()
-deneme deneme
-deneme line
