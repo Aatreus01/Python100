@@ -16,17 +16,23 @@ paddle_l = paddle.Paddle(pos_left)
 
 ball = ball.Ball()
 
+screen.listen()
+screen.onkey(key="w", fun=paddle_l.moveUp)
+screen.onkey(key="s", fun=paddle_l.moveDown)
+screen.onkey(key="Up", fun=paddle_r.moveUp)
+screen.onkey(key="Down", fun=paddle_r.moveDown)
+
+
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
     ball.move()
-    screen.listen()
-    screen.onkey(key="w", fun=paddle_l.moveUp)
-    screen.onkey(key="s", fun=paddle_l.moveDown)
-    screen.onkey(key="Up", fun=paddle_r.moveUp)
-    screen.onkey(key="Down", fun=paddle_r.moveDown)
     
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
+    if ball.distance(paddle_r) < 50 and ball.xcor() > 320 or ball.distance(paddle_l) and ball.xcor() < -320:
+        ball.bounce_x()
 
 
 
