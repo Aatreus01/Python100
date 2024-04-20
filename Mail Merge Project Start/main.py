@@ -9,8 +9,6 @@
         
 with open('..\\Mail Merge Project Start\\Input\\Names\\invited_names.txt') as f:
     names = [line.rstrip() for line in f]
-    
-print(names)
 
 for name in names:
     with open('..\\Mail Merge Project Start\\Input\\Letters\\starting_letter.txt') as f:
